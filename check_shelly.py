@@ -162,6 +162,7 @@ if checktype == "info":
 
 elif checktype == "system":
     postdata = {'id':1, 'method':'Sys.GetStatus'}
+    r_status = None
     if auth:
         try:
             r = requests.post(apiurl, json=postdata, auth=AuthenticationMethod(args.user, args.password))
